@@ -1,42 +1,39 @@
-name = input("Enter your real name, Agent: ")
-gadget = input("Enter your favorite gadget, Agent: ")
-agent_number = 7
-speed_rating = 9.5
-mission_count = 12
-height_m = 1.65
-is_active = True
-print("Name: ", name, "-> type:", type(name))
-print("Gadget: ", gadget, "-> type:", type(gadget))
-print("Agent Number: ", agent_number, "-> type:", type(agent_number))
-print("Speed Rating: ", speed_rating, "-> type:", type(speed_rating))
-print("Mission Count: ", mission_count, "-> type:", type(mission_count))
-print("Height (m): ", height_m, "-> type:", type(height_m))
-print("Is Active: ", is_active, "-> type:", type(is_active))
-agent_number_text = str(agent_number)
-print("Agent Number as text:", agent_number_text, "-> type:", type(agent_number_text))
-print("Mission Count as text:", str(mission_count), "-> type:", type(str(mission_count)))
-print("Speed Rating as text:", str(speed_rating), "-> type:", type(str(speed_rating)))
-status_text = str(is_active)
-print("Status as text:", status_text, "-> type:", type(status_text))
-first_three = name[0:3]
-last_letter = name[-1]
-code_name = first_three + last_letter
-print("First three letters of name:", first_three)
-print("Last letter of name:", last_letter)
-print("Code name:", code_name)
-reversed_gadget = gadget[::-1]
-print("Reversed Gadget Name", reversed_gadget)
-badge_line_1 = "AGENT " + code_name.upper()
-badge_line_2 = "ID: " + agent_number_text
-badge_line_3 = "MISSIONS: " + str(mission_count)
-badge_line_4 = "SPEED: " + str(speed_rating)
-badge_line_5 = "ACTIVE: " + status_text
-badge_line_6 = "SECRET GADGET CODE: " + reversed_gadget.upper()
+temperature = int(input("Enter today's temperature in Celsius: "))
+if temperature < 20:
+    outfit = "jacket"
+    print("Its cold today.")
+    print("You should wear a", outfit)
+else:
+    outfit = "t-shirt"
+    print("Its warm today.")
+    print("You should wear a", outfit)
+is_raining = input("Is it raining today? (yes/no): ")
+if is_raining == "yes":
+    print("Bring an umbrella!") 
+wind_speed = int(input("Enter today's wind speed in km/h: "))
+if wind_speed > 30:
+    needs_windbreaker = "yes"
+    print("It's windy today.")
+    print("Wear a windbreaker over your", outfit)
+else:
+    needs_windbreaker = "no"
+    print("The wind is calm today.")
+    print("You don't need a windbreaker over your", outfit)
+has_puddles = input("Are there puddles on the ground? (yes/no): ")
+if has_puddles == "yes":
+    shoes = "boots"
+    print("The ground is wet.")
+    print("Wear", shoes)
+else:
+    shoes = "sneakers"
+    print("The ground is dry.")
+    print("Wear", shoes)
 print("")
-print(badge_line_1)
-print(badge_line_2)
-print(badge_line_3)
-print(badge_line_4)
-print(badge_line_5)
-print(badge_line_6)
-print("===============================")
+print("Weather check complete!")
+print("====== WEATHER OUTFIT PICKER ======")
+print("Today's temperature:", temperature)
+print("Outfit Chosen:", outfit)
+print("Raining:", is_raining)
+print("Windbreaker Needed:", needs_windbreaker)
+print("Shoes Chosen:", shoes)
+print("===================================")

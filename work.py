@@ -1,39 +1,34 @@
-temperature = int(input("Enter today's temperature in Celsius: "))
-if temperature < 20:
-    outfit = "jacket"
-    print("Its cold today.")
-    print("You should wear a", outfit)
+print("=== Smart School Day Planner ===")
+print("Answer 3 quick questions and I will plan your day!\n")
+day     = input("What day is it? (Monday to Sunday):").strip().capitalize()
+weather = input("What is the weather like? (sunny, rainy, cloudy): ").strip().lower()
+homework = input("Is your homework done? (yes/no): ").strip().lower()
+print()
+print(f"=== Your plan for {day} ===")
+print("-" * 35)
+if day in ("Saturday", "Sunday"):
+    print("Its the weekend! Enjoy your free time!")
+elif day == "Monday":
+    print("Day type    : First day of the week.")
+elif day == "Friday":
+    print("Day type  : Last school day of the week! Remember to return library books.")
+elif day in ("Tuesday", "Wednesday", "Thursday"):
+    print("Day type  : A regular school day.")
 else:
-    outfit = "t-shirt"
-    print("Its warm today.")
-    print("You should wear a", outfit)
-is_raining = input("Is it raining today? (yes/no): ")
-if is_raining == "yes":
-    print("Bring an umbrella!") 
-wind_speed = int(input("Enter today's wind speed in km/h: "))
-if wind_speed > 30:
-    needs_windbreaker = "yes"
-    print("It's windy today.")
-    print("Wear a windbreaker over your", outfit)
+    print("Day type : Day not recognized. Please enter a valid day of the week.")
+if weather == "sunny" and homework == "yes":
+    print("After school : Head to the park - great weather and homework is done!")
+if weather == "rainy" or weather == "cloudy":
+    print("Weather tip: Pack your umbrella - it may get wet outside.")
+if not (homework == "yes"):
+    print("Homework: Not done yet. Make sure to complete it before going out to play.")
+if weather == "rainy" and not (homework == "yes"):
+    print("Best plan: Stay in, finish your homework, and then you can do whatever you want while staying indoors.")
+elif weather == "sunny" and homework == "yes" and not (day in ("Saturday", "Sunday")):
+    print("Best plan: All set for a school day! Enjoy your classes and have fun after school!")
+elif day in ("Saturday", "Sunday") and weather == "sunny":
+    print("Best plan   : Perfect weekend weather - head outside and have fun!")
 else:
-    needs_windbreaker = "no"
-    print("The wind is calm today.")
-    print("You don't need a windbreaker over your", outfit)
-has_puddles = input("Are there puddles on the ground? (yes/no): ")
-if has_puddles == "yes":
-    shoes = "boots"
-    print("The ground is wet.")
-    print("Wear", shoes)
-else:
-    shoes = "sneakers"
-    print("The ground is dry.")
-    print("Wear", shoes)
-print("")
-print("Weather check complete!")
-print("====== WEATHER OUTFIT PICKER ======")
-print("Today's temperature:", temperature)
-print("Outfit Chosen:", outfit)
-print("Raining:", is_raining)
-print("Windbreaker Needed:", needs_windbreaker)
-print("Shoes Chosen:", shoes)
-print("===================================")
+    print("Best plan   : Take it one step at a time - You got this!")
+print()
+print("Plan complete! Have a great day!")  

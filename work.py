@@ -1,34 +1,49 @@
-print("=== Smart School Day Planner ===")
-print("Answer 3 quick questions and I will plan your day!\n")
-day     = input("What day is it? (Monday to Sunday):").strip().capitalize()
-weather = input("What is the weather like? (sunny, rainy, cloudy): ").strip().lower()
-homework = input("Is your homework done? (yes/no): ").strip().lower()
+print("================================")
+print("      Welcome to Ride Builder!      ")
+print("================================")
+print("      Welcome to Ride Builder!      ")
+print("================================")
 print()
-print(f"=== Your plan for {day} ===")
-print("-" * 35)
-if day in ("Saturday", "Sunday"):
-    print("Its the weekend! Enjoy your free time!")
-elif day == "Monday":
-    print("Day type    : First day of the week.")
-elif day == "Friday":
-    print("Day type  : Last school day of the week! Remember to return library books.")
-elif day in ("Tuesday", "Wednesday", "Thursday"):
-    print("Day type  : A regular school day.")
-else:
-    print("Day type : Day not recognized. Please enter a valid day of the week.")
-if weather == "sunny" and homework == "yes":
-    print("After school : Head to the park - great weather and homework is done!")
-if weather == "rainy" or weather == "cloudy":
-    print("Weather tip: Pack your umbrella - it may get wet outside.")
-if not (homework == "yes"):
-    print("Homework: Not done yet. Make sure to complete it before going out to play.")
-if weather == "rainy" and not (homework == "yes"):
-    print("Best plan: Stay in, finish your homework, and then you can do whatever you want while staying indoors.")
-elif weather == "sunny" and homework == "yes" and not (day in ("Saturday", "Sunday")):
-    print("Best plan: All set for a school day! Enjoy your classes and have fun after school!")
-elif day in ("Saturday", "Sunday") and weather == "sunny":
-    print("Best plan   : Perfect weekend weather - head outside and have fun!")
-else:
-    print("Best plan   : Take it one step at a time - You got this!")
+print("Step 1: Pick your vehicle.")
+print("  1 - Bike")
+print("  2 - Car")
 print()
-print("Plan complete! Have a great day!")  
+choice = int(input("Enter 1 or 2: "))
+print()
+if choice == 1:
+    print("Step 2: Pick your bike type.")
+    print("  1 - Scooty")
+    print("  2 - Mountain Bike")
+    print()
+    bike_type = int(input("Enter 1 or 2: "))
+    print()
+    if bike_type == 1:
+        print("You picked: Scooty")
+        print("Top speed: 50 km/h")
+        print("Best for: City rides and short commutes.")
+    else:
+        print("You picked: Mountain Bike")
+        print("Top speed: 30 km/h")
+        print("Best for: Off-road adventures and trails.")
+elif choice == 2:
+    print("Step 2: Pick your car type.")
+    print("  1 - Sedan")
+    print("  2 - SUV")
+    print()
+    car_type = int(input("Enter 1 or 2: "))
+    print()
+    if car_type == 1:
+        print("You picked: Sedan")
+        print("Top-speed: 180 km/h")
+        print("Best for: Comfortable city and highway driving.")
+    else:
+        print("You picked: SUV")
+        print("Top speed: 150 km/h")
+        print("Best for: Adventure and off-road driving.")
+else:
+    print("Invalid choice. Please enter either 1 (Bike) or 2 (Car).")
+print()
+print("=================================")
+print("        Your Custom Ride is ready!     ")
+print("        Enjoy the ride!                ")
+print("=================================")

@@ -1,44 +1,5 @@
-print("=================================")
-print("    Welcome to Holiday Planner!    ")
-print("=================================")
-print()
-print("Step 1: Pick your holiday type.")
-print("  1 - Beach Vacation")
-print("  2 - Mountain Retreat")
-print()
-choice = int(input("Enter 1 or 2: "))
-if choice == 1:
-    print("Step 2: Pick your beach destination.")
-    print("  1 - Maldives")
-    print("  2 - Bali")
-    print()
-    beach_destination = int(input("Enter 1 or 2: "))
-    if beach_destination == 1:
-        print("You picked: Maldives")
-        print("Best time to visit: November to April")
-        print("Activities: Snorkeling, Diving, Relaxing on the beach.")
-    else:
-        print("You picked: Bali")
-        print("Best time to visit: April to October")
-        print("Activities: Surfing, Exploring temples, Enjoying local cuisine, Enjoying the beach parties and the vibrant nightlife.")
-elif choice == 2:
-    print("Step 2: Pick your mountain destination.")
-    print("  1 - Swiss Alps")
-    print("  2 - Rocky Mountains")
-    print()
-    mountain_destination = int(input("Enter 1 or 2: "))
-    if mountain_destination == 1:
-        print("You picked: Swiss Alps")
-        print("Best time to visit: December to March")
-        print("Activities: Skiing, Snowboarding, Hiking, Enjoying the scenic views.")
-    else:
-        print("You picked: Rocky Mountains")
-        print("Best time to visit: June to September")
-        print("Activities: Hiking, Wildlife watching, Camping, Fishing.")
-else:
-    print("Invalid choice. Please enter either 1 (Beach Vacation) or 2 (Mountain Retreat).")
-print()
-print("=================================")
-print("        Your Holiday Plan is ready!     ")
-print("        Enjoy your trip!                ")
-print("=================================")
+n = int(input("Enter a number whose sum you want to find: "))
+sum = 0
+for i in range (1, n + 1):
+    sum = sum+i
+    print("\nSum =", sum)

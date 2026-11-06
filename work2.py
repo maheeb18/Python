@@ -1,8 +1,9 @@
-print("Triangular Pattern of Numbers: ")
-rows = int(input("Please Enter the Total Number of Rows  : "))
-number = 1
-for i in range(1, rows + 1):
-    for j in range(1, i + 1):
-        print(number, end=" ")
-        number = number + 1
-    print()
+def cube(number):
+    return number*number*number
+def by_three(number):
+    if number %3 ==0:
+        return cube(number)
+    else:
+        return False
+print(by_three(3))
+print(by_three(4))
